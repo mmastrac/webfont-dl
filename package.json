@@ -1,5 +1,5 @@
 {
-  "name": "webfont",
+  "name": "webfont-dl",
   "version": "0.0.1",
   "description": "Web font downloader/inliner",
   "main": "webfont-dl.js",

@@ -1,6 +1,6 @@
 {
   "name": "webfont-dl",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "dependencies": {
     "css": {
       "version": "2.1.0",
@@ -57,11 +57,6 @@
       "version": "0.2.2",
       "from": "css-font-face-src@>=0.2.2-0 <0.3.0-0",
       "resolved": "https://registry.npmjs.org/css-font-face-src/-/css-font-face-src-0.2.2.tgz"
-    },
-    "css-parse": {
-      "version": "2.0.0",
-      "from": "css-parse@>=2.0.0-0 <3.0.0-0",
-      "resolved": "https://registry.npmjs.org/css-parse/-/css-parse-2.0.0.tgz"
     },
     "docopt": {
       "version": "0.4.1",

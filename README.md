@@ -27,6 +27,7 @@ The CSS output from the tool contains a number of features:
   * local() names are preserved from the input CSS
   * IE6-8 compatibility is enabled by hoisting a copy of .eot files into a separate src line
 
+
     @font-face {
       font-family: 'Crimson Text';
       font-style: normal;
@@ -40,7 +41,6 @@ The CSS output from the tool contains a number of features:
         url("/font/crimsontext-528b74b55df7980a8f694e9a56d2feeaa1ae351e.svg#CrimsonText") format("svg"), 
         url("/font/crimsontext-381297740916b3fe12a631447ee8a802af3bea16.ttf") format("truetype");
     }
-
 
 Usage
 =====

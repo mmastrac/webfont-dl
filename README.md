@@ -5,6 +5,8 @@ Webfont Downloader.
 
 Downloads a set of web fonts specified by `@font-face` rules in a CSS file. By default, `woff` equivalents are inlined (since the modern browsers all support it).
 
+By inlining `woff` files, this reduces the number of server roundtrips by two in the best case (the external CSS and `woff` files), one in the worst (just the external CSS). By reducing roundtrips we can reduce the amount of time we risk showing a flash of unstyled or hidden text content.
+
 Examples
 ========
 
@@ -26,7 +28,8 @@ The CSS output from the tool contains a number of features:
   * The fonts are strongly named using a sha-1 hash
   * local() names are preserved from the input CSS
   * IE6-8 compatibility is enabled by hoisting a copy of .eot files into a separate src line
-    
+  * Selected font formats are inlined
+
         @font-face {
           font-family: 'Crimson Text';
           font-style: normal;

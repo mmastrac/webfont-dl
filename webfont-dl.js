@@ -1,4 +1,5 @@
 var fs = require('fs');
+var path = require('path');
 
 var opts = require('./options').parse();
 
@@ -21,6 +22,13 @@ function run(opts) {
     });
 }
 
-fs.mkdir(opts.fontOut, function(err) {
-  run(opts);
+fs.mkdir(path.dirname(opts.out), function(err) {
+  if (!fs.existsSync(path.dirname(opts.out)) && err)
+    throw new Error(err);
+  fs.mkdir(opts.fontOut, function(err) {
+    if (!fs.existsSync(opts.fontOut) && err)
+      throw new Error(err);
+
+    run(opts);
+  });
 });

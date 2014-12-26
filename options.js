@@ -10,6 +10,7 @@ and downloaded fonts in a given output directory.
 
 Usage: webfont <css-url-or-file> --out FILE [options]
 
+--help,-h           Prints help
 --out FILE,-o FILE  Output file for CSS
 --font-out=DIR      Font output directory [default: same folder as CSS]
 --css-rel=PATH      CSS-relative path for fonts [default: ./]

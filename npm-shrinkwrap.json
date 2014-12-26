@@ -1,12 +1,7 @@
 {
-  "name": "webfont",
-  "version": "0.0.1",
+  "name": "webfont-dl",
+  "version": "0.0.4",
   "dependencies": {
-    "base64": {
-      "version": "2.1.0",
-      "from": "base64@>=2.1.0-0 <3.0.0-0",
-      "resolved": "https://registry.npmjs.org/base64/-/base64-2.1.0.tgz"
-    },
     "css": {
       "version": "2.1.0",
       "from": "css@>=2.1.0-0 <3.0.0-0",

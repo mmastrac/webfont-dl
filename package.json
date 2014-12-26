@@ -1,10 +1,9 @@
 {
   "name": "webfont-dl",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "Web font downloader/inliner",
   "main": "webfont-dl.js",
   "dependencies": {
-    "base64": "^2.1.0",
     "css": "^2.1.0",
     "css-font-face-src": "^0.2.2",
     "docopt": "^0.4.1",
@@ -13,8 +12,14 @@
     "request": "^2.51.0",
     "css-parse": "^2.0.0"
   },
+  "directories": {
+    "lib": "./lib"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "webfont-dl": "./bin/webfont-dl.js"
   },
   "author": "Matt Mastracci <matthew@mastracci.com>",
   "license": "MIT",

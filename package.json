@@ -1,0 +1,23 @@
+{
+  "name": "webfont",
+  "version": "0.0.1",
+  "description": "",
+  "main": "webfont.js",
+  "dependencies": {
+    "base64": "^2.1.0",
+    "css": "^2.1.0",
+    "css-font-face-src": "^0.2.2",
+    "docopt": "^0.4.1",
+    "multiline": "^1.0.1",
+    "q": "^1.1.2",
+    "request": "^2.51.0"
+  },
+  "devDependencies": {
+    "css-parse": "^2.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

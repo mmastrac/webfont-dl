@@ -16,15 +16,22 @@ Install it globally
 
     npm install -g webfont-dl
 
-Download "Crimson Text" in 400/normal and 400/italic and "Raleway" in 500/normal from Google's font API. Inlines `woff` format files, puts the CSS and fonts into `css/`.
+Download "Crimson Text" in 400/normal and 400/italic and "Raleway" in 500/normal from Google's font API. Inlines `woff` format files, puts the CSS and 
+fonts into `css/`.
 
     webfont-dl "http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic|Raleway:500" \
       -o css/font.css
   
-Download "Crimson Text" in 400/normal and 400/italic and "Raleway" in 500/normal from Google's font API. Doesn't inline any files, puts CSS into `css/`, and fonts in `font/`.
+Download "Crimson Text" in 400/normal and 400/italic and "Raleway" in 500/normal from Google's font API. Doesn't inline any files, puts CSS into `css/`, 
+and fonts in `font/`.
 
     webfont-dl "http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic|Raleway:500" \
-      -o css/font.css --font-out=font --css-rel=/font --woff=link
+      -o css/font.css --font-out=font --css-rel=../font --woff=link
+
+Download the OpenSans collections
+
+    webfont-dl -d "https://github.com/steakejjs/OpenSans-CSS/raw/master/OpenSans.css" \
+      -o css/font.css --font-out=font --css-rel=../font
 
 Output
 ======

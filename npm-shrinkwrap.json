@@ -1,6 +1,6 @@
 {
   "name": "webfont-dl",
-  "version": "0.0.6",
+  "version": "0.1.1",
   "dependencies": {
     "css": {
       "version": "2.1.0",
@@ -62,6 +62,18 @@
       "version": "0.4.1",
       "from": "docopt@>=0.4.1-0 <0.5.0-0",
       "resolved": "https://registry.npmjs.org/docopt/-/docopt-0.4.1.tgz"
+    },
+    "mkdirp": {
+      "version": "0.5.0",
+      "from": "mkdirp@*",
+      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.0.tgz",
+      "dependencies": {
+        "minimist": {
+          "version": "0.0.8",
+          "from": "minimist@0.0.8",
+          "resolved": "https://registry.npmjs.org/minimist/-/minimist-0.0.8.tgz"
+        }
+      }
     },
     "multiline": {
       "version": "1.0.1",

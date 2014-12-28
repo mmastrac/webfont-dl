@@ -73,21 +73,21 @@ Example output:
 
 Usage
 =====
-    
-Web font downloader.
+         
+    Web font downloader.
 
-Given a font definition file in webfontloader style, outputs a single CSS file
-and downloaded fonts in a given output directory.
+    Given a font definition file in webfontloader style, outputs a single CSS file
+    and downloaded fonts in a given output directory.
 
-Usage: webfont <css-url-or-file> --out FILE [options]
+    Usage: webfont <css-url-or-file> --out FILE [options]
 
---help,-h           Prints help
---out FILE,-o FILE  Output file for CSS
---font-out=DIR      Font output directory [default: same folder as CSS]
---css-rel=PATH      CSS-relative path for fonts [default: ./]
---woff2=<mode>      Processing mode for woff v2 fonts: data, link or omit [default: omit]
---woff1=<mode>      Processing mode for woff v1 fonts: data, link or omit [default: data]
---svg=<mode>        Processing mode for svg fonts: data, link or omit [default: link]
---ttf=<mode>        Processing mode for ttf fonts: data, link or omit [default: link]
---eot=<mode>        Processing mode for eot fonts: data, link or omit [default: link]
--d                  Debug info [default: false]
+    --help,-h           Prints help
+    --out FILE,-o FILE  Output file for CSS
+    --font-out=DIR      Font output directory [default: same folder as CSS]
+    --css-rel=PATH      CSS-relative path for fonts [default: ./]
+    --woff2=<mode>      Processing mode for woff v2 fonts: data, link or omit [default: omit]
+    --woff1=<mode>      Processing mode for woff v1 fonts: data, link or omit [default: data]
+    --svg=<mode>        Processing mode for svg fonts: data, link or omit [default: link]
+    --ttf=<mode>        Processing mode for ttf fonts: data, link or omit [default: link]
+    --eot=<mode>        Processing mode for eot fonts: data, link or omit [default: link]
+    -d                  Debug info [default: false]

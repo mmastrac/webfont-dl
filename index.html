@@ -1,0 +1,30 @@
+<html>
+<head>
+	<link href="font/font.css" rel="stylesheet" type="text/css">
+	<style>
+	html {
+		font-family: "Crimson Text";
+	}
+
+	h1 {
+		font-family: "Raleway";
+	}
+
+	pre {
+		font-family: monospace;
+	}
+	</style>
+</head>
+<html>
+<h1>Web Font Example</h1>
+
+<p>
+This page uses inlined web fonts in a CSS file that was generated via webfont-dl.
+</p>
+
+<pre>
+webfont-dl -d "http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic|Raleway:500" -o font/font.css \
+	--font-out font/fonts --css-rel=fonts
+</pre>
+
+</html>

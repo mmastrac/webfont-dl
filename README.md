@@ -3,32 +3,44 @@ webfont-dl
 
 Web font downloader/inliner.
 
-Downloads a set of web fonts specified by `@font-face` rules in a CSS file. By default, `woff` equivalents are inlined as [the modern browsers all support it](http://en.wikipedia.org/wiki/Web_Open_Font_Format).
+Downloads a set of web fonts specified by `@font-face` rules in a CSS file. By default, `woff` equivalents are inlined as [the modern browsers all support 
+it](http://en.wikipedia.org/wiki/Web_Open_Font_Format). See the note about WOFF2 below.
 
-By inlining `woff` files, this reduces the number of server roundtrips by two in the best case (the external CSS and `woff` files), one in the worst (just the external CSS). By reducing roundtrips we can reduce the amount of time we risk showing a flash of unstyled or hidden text content.
+By inlining `woff` files, this reduces the number of server roundtrips by two in the best case (the external CSS and `woff` files), one in the worst (just 
+the external CSS). By reducing roundtrips we can reduce the amount of time we risk showing a flash of unstyled or hidden text content.
 
 This tool is currently designed to work against Google's font server but should work against any hosted CSS font that uses `@font-face`.
+
+WOFF v2
+=======
+
+The tool does not download WOFF2 files by default at this time as browser support for this is currently low and you'll lose some of the advantages of 
+inlining the `woff` file. You can override this behaviour using `--woff2=link` or `--woff2=data`.
 
 Examples
 ========
 
-Install it globally
+Install it globally:
 
     npm install -g webfont-dl
 
-Download "Crimson Text" in 400/normal and 400/italic and "Raleway" in 500/normal from Google's font API. Inlines `woff` format files, puts the CSS and 
-fonts into `css/`.
+Download "Crimson Text" in 400/normal and 400/italic and "Raleway" in 500/normal from Google's font API. Inlines `woff` (version 1) format files, puts the 
+CSS and fonts into `css/`:
 
     webfont-dl "http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic|Raleway:500" \
       -o css/font.css
   
 Download "Crimson Text" in 400/normal and 400/italic and "Raleway" in 500/normal from Google's font API. Doesn't inline any files, puts CSS into `css/`, 
-and fonts in `font/`.
+and fonts in `font/`:
 
     webfont-dl "http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic|Raleway:500" \
-      -o css/font.css --font-out=font --css-rel=../font --woff=link
+      -o css/font.css --font-out=font --css-rel=../font --woff1=link
 
-Download the OpenSans collections
+Download "Crimson Text" in 400/normal in both `woff` (version 1) and `woff2` formats:
+
+    webfont-dl "http://fonts.googleapis.com/css?family=Crimson+Text:400 --woff1=link --woff2=link
+
+Download the OpenSans collection from github:
 
     webfont-dl -d "https://github.com/steakejjs/OpenSans-CSS/raw/master/OpenSans.css" \
       -o css/font.css --font-out=font --css-rel=../font
@@ -62,19 +74,20 @@ Example output:
 Usage
 =====
     
-    Web font downloader.
-    
-    Given a font definition file in webfontloader style, outputs a single CSS file
-    and downloaded fonts in a given output directory.
-    
-    Usage: webfont <css-url-or-file> --out FILE [options]
-    
-    --help,-h           Prints help
-    --out FILE,-o FILE  Output file for CSS
-    --font-out=DIR      Font output directory [default: same folder as CSS]
-    --css-rel=PATH      CSS-relative path for fonts [default: ./]
-    --woff=<mode>       Processing mode for woff fonts: data, link or omit [default: data]
-    --svg=<mode>        Processing mode for svg fonts: data, link or omit [default: link]
-    --ttf=<mode>        Processing mode for ttf fonts: data, link or omit [default: link]
-    --eot=<mode>        Processing mode for eot fonts: data, link or omit [default: link]
-    -d                  Debug info [default: false]
+Web font downloader.
+
+Given a font definition file in webfontloader style, outputs a single CSS file
+and downloaded fonts in a given output directory.
+
+Usage: webfont <css-url-or-file> --out FILE [options]
+
+--help,-h           Prints help
+--out FILE,-o FILE  Output file for CSS
+--font-out=DIR      Font output directory [default: same folder as CSS]
+--css-rel=PATH      CSS-relative path for fonts [default: ./]
+--woff2=<mode>      Processing mode for woff v2 fonts: data, link or omit [default: omit]
+--woff1=<mode>      Processing mode for woff v1 fonts: data, link or omit [default: data]
+--svg=<mode>        Processing mode for svg fonts: data, link or omit [default: link]
+--ttf=<mode>        Processing mode for ttf fonts: data, link or omit [default: link]
+--eot=<mode>        Processing mode for eot fonts: data, link or omit [default: link]
+-d                  Debug info [default: false]

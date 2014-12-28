@@ -14,8 +14,8 @@ This tool is currently designed to work against Google's font server but should 
 WOFF v2
 =======
 
-The tool does not download WOFF2 files by default at this time as browser support for this is currently low and you'll lose some of the advantages of 
-inlining the `woff` file. You can override this behaviour using `--woff2=link` or `--woff2=data`.
+The tool does not download WOFF2 files by default at this time as [browser support for this is currently low](http://caniuse.com/#feat=woff) and you'll lose some of the advantages of 
+inlining a v1 `woff` file. You can override this behaviour using `--woff2=link` or `--woff2=data`.
 
 Examples
 ========

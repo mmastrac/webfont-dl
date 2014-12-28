@@ -20,6 +20,8 @@ inlining the `woff` file. You can override this behaviour using `--woff2=link` o
 Examples
 ========
 
+Want to see it in action? [Check out the test page here.](http://mmastrac.github.io/webfont-dl/)
+
 Install it globally:
 
     npm install -g webfont-dl

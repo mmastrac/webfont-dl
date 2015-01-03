@@ -11,6 +11,21 @@ the external CSS). By reducing roundtrips we can reduce the amount of time we ri
 
 This tool is currently designed to work against Google's font server but should work against any hosted CSS font that uses `@font-face`.
 
+But what about CDNs?
+====================
+
+Content Distribution Networks work well in the case where you know with a high degree of certainty that a user has visited 
+a site linking to the same piece of content. If you're using fonts that big names like Google are using (ie: Roboto) you
+might have a great cache hit rate. For fonts that are more "long tail" or customized via font subsetting this cache hit 
+rate will drop off dramatically. 
+
+Google's font CDN caches the fonts themselves using a strong cache identifier: the fonts are hashed and that hash is used as
+a strong, long-lived cache key. The CSS that references the font, however, is only cached for a short period of time. This
+means that your visitors will have to frequently download the indirect CSS file, adding an extra request and latency to the
+page load. 
+
+By inlining the fonts in your stylesheets, you avoid the one or two extra requests that happen on cache misses. In addition, the fonts will be loaded as part of your site's CSS and you can avoid the flash of unstyled or invisible text associated with long-running font loads.
+
 WOFF v2
 =======
 

@@ -29,8 +29,8 @@ By inlining the fonts in your stylesheets, you avoid the one or two extra reques
 WOFF v2
 =======
 
-The tool does not download WOFF2 files by default at this time as [browser support for this is currently low](http://caniuse.com/#feat=woff) and you'll lose some of the advantages of 
-inlining a v1 `woff` file. You can override this behaviour using `--woff2=link` or `--woff2=data`.
+The tool does not download WOFF2 files by default at this time as [browser support for this is currently low](http://caniuse.com/#feat=woff2) and you'll lose some of the advantages of 
+inlining a v1 `woff` file ([for which support is very good!](http://caniuse.com/#feat=woff)). You can override this behaviour using `--woff2=link` or `--woff2=data`.
 
 Examples
 ========

@@ -3,8 +3,8 @@ webfont-dl
 
 Web font downloader/inliner.
 
-Downloads a set of web fonts specified by `@font-face` rules in a CSS file. By default, `woff` equivalents are inlined as [the modern browsers all support 
-it](http://en.wikipedia.org/wiki/Web_Open_Font_Format). See the note about WOFF2 below.
+Downloads a set of web fonts specified by `@font-face` rules in a CSS file. By default, `woff2` equivalents are inlined as [the modern browsers all support 
+it](http://en.wikipedia.org/wiki/Web_Open_Font_Format).
 
 By inlining `woff` files, this reduces the number of server roundtrips by two in the best case (the external CSS and `woff` files), one in the worst (just 
 the external CSS). By reducing roundtrips we can reduce the amount of time we risk showing a flash of unstyled or hidden text content.
@@ -24,13 +24,8 @@ a strong, long-lived cache key. The CSS that references the font, however, is on
 means that your visitors will have to frequently download the indirect CSS file, adding an extra request and latency to the
 page load. 
 
-By inlining the fonts in your stylesheets, you avoid the one or two extra requests that happen on cache misses. In addition, the fonts will be loaded as part of your site's CSS and you can avoid the flash of unstyled or invisible text associated with long-running font loads.
-
-WOFF v2
-=======
-
-The tool does not download WOFF2 files by default at this time as [browser support for this is currently low](http://caniuse.com/#feat=woff2) and you'll lose some of the advantages of 
-inlining a v1 `woff` file ([for which support is very good!](http://caniuse.com/#feat=woff)). You can override this behaviour using `--woff2=link` or `--woff2=data`.
+By inlining the fonts in your stylesheets, you avoid the one or two extra requests that happen on cache misses. In addition, the fonts will be loaded as part of 
+your site's CSS and you can avoid the flash of unstyled or invisible text associated with long-running font loads.
 
 Examples
 ========
@@ -102,9 +97,9 @@ Usage
     --out FILE,-o FILE  Output file for CSS
     --font-out=DIR      Font output directory [default: same folder as CSS]
     --css-rel=PATH      CSS-relative path for fonts [default: ./]
-    --woff2=<mode>      Processing mode for woff v2 fonts: data, link or omit [default: omit]
-    --woff1=<mode>      Processing mode for woff v1 fonts: data, link or omit [default: data]
-    --svg=<mode>        Processing mode for svg fonts: data, link or omit [default: link]
+    --woff2=<mode>      Processing mode for woff v2 fonts: data, link or omit [default: data]
+    --woff1=<mode>      Processing mode for woff v1 fonts: data, link or omit [default: link]
+    --svg=<mode>        Processing mode for svg fonts: data, link or omit [default: omit]
     --ttf=<mode>        Processing mode for ttf fonts: data, link or omit [default: link]
     --eot=<mode>        Processing mode for eot fonts: data, link or omit [default: link]
     -d                  Debug info [default: false]

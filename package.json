@@ -1,6 +1,6 @@
 {
   "name": "webfont-dl",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Web font downloader/inliner",
   "main": "webfont-dl.js",
   "dependencies": {

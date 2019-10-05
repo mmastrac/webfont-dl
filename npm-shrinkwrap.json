@@ -1,6 +1,6 @@
 {
   "name": "webfont-dl",
-  "version": "0.1.2",
+  "version": "0.1.5",
   "lockfileVersion": 1,
   "requires": true,
   "dependencies": {
@@ -154,9 +154,9 @@
       "integrity": "sha1-3zrhmayt+31ECqrgsp4icrJOxhk="
     },
     "docopt": {
-      "version": "0.4.1",
-      "resolved": "https://registry.npmjs.org/docopt/-/docopt-0.4.1.tgz",
-      "integrity": "sha1-6a5NPRT3/qPkgBkjXrxfEATSLoc="
+      "version": "0.6.2",
+      "resolved": "https://registry.npmjs.org/docopt/-/docopt-0.6.2.tgz",
+      "integrity": "sha1-so6eIiDaXsSffqW7JKR3h0Be6xE="
     },
     "ecc-jsbn": {
       "version": "0.1.2",

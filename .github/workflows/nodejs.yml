@@ -21,7 +21,6 @@ jobs:
       run: |
         npm install
         npm run build --if-present
-        bin/webfont-dl "http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic|Raleway:500" \
-  -o css/font.css
+        bin/webfont-dl "http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic|Raleway:500" -o css/font.css
       env:
         CI: true

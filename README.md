@@ -1,4 +1,4 @@
-webfont-dl ![https://github.com/mmastrac/webfont-dl/actions](https://github.com/mmastrac/webfont-dl/workflows/Node%20CI/badge.svg) ![https://www.npmjs.com/package/webfont-dl](https://badge.fury.io/js/webfont-dl.svg)
+webfont-dl [![https://github.com/mmastrac/webfont-dl/actions](https://github.com/mmastrac/webfont-dl/workflows/Node%20CI/badge.svg)](https://github.com/mmastrac/webfont-dl/actions) [![https://www.npmjs.com/package/webfont-dl](https://badge.fury.io/js/webfont-dl.svg)](https://www.npmjs.com/package/webfont-dl)
 ==========
 
 Web font downloader/inliner.

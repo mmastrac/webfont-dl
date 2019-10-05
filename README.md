@@ -1,4 +1,4 @@
-webfont-dl
+webfont-dl ![](https://github.com/mmastrac/webfont-dl/workflows/Node%20CI/badge.svg)
 ==========
 
 Web font downloader/inliner.

@@ -248,9 +248,9 @@
       }
     },
     "mkdirp": {
-      "version": "2.1.5",
-      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-2.1.5.tgz",
-      "integrity": "sha512-jbjfql+shJtAPrFoKxHOXip4xS+kul9W3OzfzzrqueWK2QMGon2bFH2opl6W9EagBThjEz+iysyi/swOoVfB/w=="
+      "version": "3.0.0",
+      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-3.0.0.tgz",
+      "integrity": "sha512-7+JDnNsyCvZXoUJdkMR0oUE2AmAdsNXGTmRbiOjYIwQ6q+bL6NwrozGQdPcmYaNcrhH37F50HHBUzoaBV6FITQ=="
     },
     "neodoc": {
       "version": "2.0.2",

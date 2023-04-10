@@ -6,7 +6,7 @@
   "dependencies": {
     "css": "^3.0.0",
     "css-font-face-src": "^1.0.0",
-    "mkdirp": "^2.1.5",
+    "mkdirp": "^3.0.0",
     "neodoc": "^2.0.2",
     "q": "^1.1.2",
     "request": "^2.88.0"
